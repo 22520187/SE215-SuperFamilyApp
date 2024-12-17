@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+
+            <ImageView
+                android:id="@+id/ivHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_family_setup" />
+
+            <TextView
+                android:id="@+id/tvHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Hello,\nPlease spend a minute to setup your Family!"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="-60dp"
+            android:layout_gravity="center">
+
+            <!-- Avatar Border -->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/avatar_border" />
+
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="75dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_ava" />
+
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/ic_camera"
+                android:background="@drawable/avatar_border"
+                android:layout_margin="0dp" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerFamilyMember"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_background"
+                android:popupBackground="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etUseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:hint="Use name"
+                android:padding="10dp"
+                android:background="@drawable/input_background" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/etDateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:hint="Date of birth"
+            android:padding="10dp"
+            android:background="@drawable/input_background"
+            android:inputType="date" />
+
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:hint="Password"
+            android:padding="10dp"
+            android:background="@drawable/input_background"
+            android:inputType="textPassword" />
+
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:hint="Enter the password"
+            android:padding="10dp"
+            android:background="@drawable/input_background"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnAddMember"
+            android:layout_width="170dp"
+            android:layout_marginLeft="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Add member +"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#FF4A64"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
+            android:text="Done ✓"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/teal_700"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
