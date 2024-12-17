@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:background="@color/black">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/avatar_border"
+                    android:src="@drawable/ic_ava"
+                    android:scaleType="centerCrop"
+                    android:padding="22dp"
+                    >
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Super dad"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/notification"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="55dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/oip"/>
+                            </LinearLayout>
+            </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Talk with my kids"
+                        android:textSize="20dp"
+                        android:gravity="center"/>    
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/twin_avatar">
+
+                        </ImageView>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter your message"
+
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Missions for kids"
+                   android:textSize="20dp"
+                   android:gravity="center"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="10dp">
+                   
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:layout_width="150dp"
+                       android:layout_height="200dp"
+                       android:layout_marginLeft="30dp"
+                       android:layout_marginTop="50dp">
+
+                       <ImageView
+                           android:layout_width="70dp"
+                           android:layout_height="70dp"
+                           android:layout_marginTop="52dp"
+                           android:src="@drawable/plus_button"
+                           app:layout_constraintEnd_toEndOf="parent"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent"/>
+
+                       <Button
+                           android:layout_width="104dp"
+                           android:layout_height="32dp"
+                           android:layout_marginBottom="4dp"
+                           android:text="New Mission"
+                           android:textSize="8dp"
+                           android:backgroundTint="@color/my_blue"
+                           app:layout_constraintBottom_toBottomOf="parent"
+                           app:layout_constraintEnd_toEndOf="parent"
+                           app:layout_constraintStart_toStartOf="parent" />
+
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+                   <FrameLayout
+                       android:layout_width="150dp"
+                       android:layout_height="250dp"
+                       android:layout_marginLeft="70dp">
+                       <ImageView
+                           android:layout_width="96dp"
+                           android:layout_height="97dp"
+                           android:src="@drawable/bacteria_killer"
+                           android:layout_marginLeft="27dp" />
+
+                       <androidx.constraintlayout.widget.ConstraintLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="200dp"
+                           android:layout_marginTop="50dp">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="60dp"
+                               android:text="Bacteria killer"
+                               app:layout_constraintEnd_toEndOf="parent"
+                               app:layout_constraintHorizontal_bias="0.507"
+                               app:layout_constraintStart_toStartOf="parent"
+                               app:layout_constraintTop_toTopOf="parent" />
+
+
+                       </androidx.constraintlayout.widget.ConstraintLayout>
+                   </FrameLayout>
+               </LinearLayout>
+           </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
