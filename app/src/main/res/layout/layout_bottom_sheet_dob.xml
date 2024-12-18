@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <EditText
+        android:id="@+id/et_bottom_sheet_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select your date"
+        android:focusable="false"
+        android:inputType="date"
+        android:padding="10dp"
+        android:background="@drawable/input_background" />
+
+</LinearLayout>

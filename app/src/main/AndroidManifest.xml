@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SE215SuperFamilyApp"
         tools:targetApi="31">
         <activity
-            android:name=".LoginPageActivity"
+            android:name=".ProfileUpdateActivity"
             android:exported="true"
             android:theme="@style/Theme.SE215SuperFamilyApp">
             <intent-filter>
