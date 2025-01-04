@@ -5,4 +5,7 @@
     <color name="white">#FFFFFF</color>
     <color name="red">#B6000F</color>
     <color name="my_blue">#06e99d</color>
+    <color name="new_mission_grat">#ebebeb</color>
+    <color name="mission_for_kid_purple">#8668fa</color>
+    <color name="mission_background">#b1f3e9</color>
 </resources>
