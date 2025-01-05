@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f9f9f9"
+    tools:context=".EventActivity">
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icons8_previous_20"
+            android:contentDescription="Back" />
+
+        <!-- Event Title -->
+        <TextView
+            android:id="@+id/tv_event_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Event Detail"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp" />
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/selectedDay"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="40dp"
+            android:paddingHorizontal="16dp"
+            android:minHeight="40dp"
+            android:minWidth="64dp" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="12dp">
+    <EditText
+        android:id="@+id/et_event_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter event name"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_time"
+            android:layout_marginEnd="12dp"
+            app:tint="#000000" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_start_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose start date"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif"
+                android:layout_marginEnd="12dp" />
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose start time"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif"
+                android:layout_marginEnd="12dp" />
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose end time"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif"
+                android:layout_marginEnd="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- Icon for "Repeat" -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_repeat"
+            android:contentDescription="With someone icon"
+            android:layout_marginEnd="12dp"
+            app:tint="#000000" />
+
+        <!-- Label for "No reapeat" -->
+        <TextView
+            android:id="@+id/tv_repeat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No repeat"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif"
+            android:layout_marginEnd="12dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- Icon for "With someone" -->
+        <ImageView
+            android:id="@+id/iv_with_someone_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_w_so"
+            android:contentDescription="With someone icon"
+            android:layout_marginEnd="12dp"
+            app:tint="#000000" />
+
+        <!-- Label for "With someone" -->
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_with_someone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With someone"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif"
+                android:layout_marginEnd="12dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMembers"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:numColumns="7" />
+        </FrameLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- Icon for "Description" -->
+        <ImageView
+            android:id="@+id/iv_description_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_description"
+            app:tint="#000000"
+            android:contentDescription="Description icon"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Text Input for "Description" -->
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Description"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

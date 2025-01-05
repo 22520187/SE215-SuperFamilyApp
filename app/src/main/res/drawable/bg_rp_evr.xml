@@ -1,0 +1,16 @@
+<!-- res/drawable/edittext_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="8dp" />
+
+    <stroke
+        android:width="1dp"
+        android:color="#CCCCCC" /> <!-- Màu viền -->
+
+    <solid android:color="#F5F5F5" /> <!-- Màu nền nhạt -->
+
+    <padding
+        android:left="12dp"
+        android:top="8dp"
+        android:right="12dp"
+        android:bottom="8dp" />
+</shape>

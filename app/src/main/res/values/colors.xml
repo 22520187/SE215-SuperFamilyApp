@@ -4,4 +4,10 @@
     <color name="teal_700">#009688</color>
     <color name="white">#FFFFFF</color>
     <color name="red">#B6000F</color>
+    <color name="colorOutsideMonth">#A3A3AE</color>
+    <color name="colorCurrentMonth">#272C3A</color>
+    <color name="selectedDay">#8668fa</color>
+    <color name="weekDate">#ffe175</color>
+    <color name="event">#DCE6FF</color>
+
 </resources>
