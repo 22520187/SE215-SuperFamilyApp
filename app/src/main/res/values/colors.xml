@@ -1,7 +1,12 @@
 <resources>
     <color name="black">#000000</color>
     <color name="gray">#808080</color>
-    <color name="teal_700">#009688</color>
+    <color name="teal_700">#27aea3</color>
+    <color name="teal_500">#009688</color>
     <color name="white">#FFFFFF</color>
     <color name="red">#B6000F</color>
+    <color name="orange">#e79749</color>
+    <color name="pink">#e74977</color>
+
+
 </resources>

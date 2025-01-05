@@ -2,26 +2,19 @@ package com.example.se215_superfamilyapp;
 
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
+import com.example.se215_superfamilyapp.Fragment.MessageFragment;
+import com.example.se215_superfamilyapp.Fragment.MissionFragment;
 import com.example.se215_superfamilyapp.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private Fragment selectorFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,48 +23,44 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
+        BottomNavigationView bottomNavigationView = binding.bottomNavigation;
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_message) {
+                selectorFragment = new MessageFragment();
+            } else if (itemId == R.id.nav_mission) {
+                 selectorFragment = new MissionFragment();
+            } else if (itemId == R.id.nav_dashboard) {
+                // selectorFragment = new DashboardFragment();
+            } else if (itemId == R.id.nav_calendar) {
+                // selectorFragment = new CalendarFragment();
+            } else if (itemId == R.id.nav_smart_money) {
+                // selectorFragment = new SmartMoneyFragment();
             }
-        });
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+            if (selectorFragment != null) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, selectorFragment)
+                        .commit();
+            }
             return true;
+        });
+
+        // Hiển thị Fragment mặc định hoặc Fragment được chỉ định qua Intent
+        if (savedInstanceState == null) {
+            String fragmentToOpen = getIntent().getStringExtra("openFragment");
+            if (fragmentToOpen != null && fragmentToOpen.equals("MessageFragment")) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new MessageFragment())
+                        .commit();
+                bottomNavigationView.setSelectedItemId(R.id.nav_message);
+            } else {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new MessageFragment())
+                        .commit();
+                bottomNavigationView.setSelectedItemId(R.id.nav_message);
+            }
         }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
     }
 }
