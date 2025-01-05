@@ -7,43 +7,251 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <include layout="@layout/wallet_header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:background="@drawable/wallet_header"
-            android:orientation="horizontal"
-            android:paddingTop="50dp"
-            android:paddingBottom="20dp"
-            >
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/back_arrow_white"
-                android:layout_gravity="center_vertical"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Smart money wallet"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dp"
-                android:textSize="25dp"
-                android:textFontWeight="@integer/material_motion_duration_long_2"
-                android:textColor="@color/white"/>
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/notification"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"/>
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/oip"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center_vertical"/>
+            android:layout_gravity="top"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="139dp"
+                    android:background="@drawable/wallet_item"
+                    android:backgroundTint="#fbaa17"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/avatar_child" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_rounded"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/plus_purple" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="+$3.00"
+                                android:textColor="@color/my_blue" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:background="@drawable/border_rounded"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/minus_purple" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="-$2.00"
+                                android:textColor="@color/red" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_rounded"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/coin_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+
+                                android:text="$25.00" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="See more"/>
+                </LinearLayout>
 
 
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="139dp"
+                    android:background="@drawable/wallet_item"
+                    android:backgroundTint="#ff8d67"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/avatar_child" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_rounded"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/plus_purple" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="+$3.00"
+                                android:textColor="@color/my_blue" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:background="@drawable/border_rounded"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/minus_purple" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="-$2.00"
+                                android:textColor="@color/red" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_rounded"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/coin_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+
+                                android:text="$25.00" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="See more"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
         </LinearLayout>
         <include layout="@layout/footer"
             android:layout_width="match_parent"
