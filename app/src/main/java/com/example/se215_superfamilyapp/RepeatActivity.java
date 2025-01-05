@@ -30,7 +30,6 @@ import java.util.List;
 public class RepeatActivity extends AppCompatActivity {
 
     private ImageButton btnBack;
-    private TextView tvEventDetail;
     private MaterialButton btnSave;
     private EditText repeatInterval, afterOccurrences, endDateInput;
     private Spinner repeatUnit;
@@ -47,7 +46,6 @@ public class RepeatActivity extends AppCompatActivity {
         // Map UI components
         lo_on_date= findViewById(R.id.lo_on_date);
         btnBack = findViewById(R.id.btn_back);
-        tvEventDetail = findViewById(R.id.tv_event_detail);
         btnSave = findViewById(R.id.btn_save);
         repeatInterval = findViewById(R.id.repeat_interval);
         repeatUnit = findViewById(R.id.repeat_unit);

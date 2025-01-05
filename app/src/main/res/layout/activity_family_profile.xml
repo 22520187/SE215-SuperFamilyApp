@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_header"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_previous" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="20dp"
+                android:text="Your Super Family"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="350dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_menu" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="300dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_notification" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/bg_dad"
+            android:padding="16dp">
+
+
+            <LinearLayout
+            android:id="@+id/name_birthday_dad_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:orientation="vertical"
+            android:layout_marginTop="-10dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dad"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23/06/1985"
+                android:textSize="16sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="-1dp"
+                android:src="@drawable/ic_expand" />
+
+            <LinearLayout
+                android:id="@+id/password_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_birthday_dad_section"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Current password -->
+                <TextView
+                    android:id="@+id/tx_current_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change user name"
+                    android:textSize="18dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/et_current_pass"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:hint="Enter your text"
+                    android:inputType="textPassword"
+                    android:background="@drawable/input_background"
+                    android:drawableRight="@drawable/ic_eye"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:textColor="@android:color/black" />
+
+                <!-- New password -->
+                <TextView
+                    android:id="@+id/tx_new_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New password"
+                    android:textSize="18dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/et_new_pass"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:hint="Enter new password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/input_background"
+                    android:drawableRight="@drawable/ic_eye"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/avatar_border_purple" />
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="45dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="29dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_ava" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/bg_mom"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:id="@+id/name_birthday_mom_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-10dp">
+
+                    <TextView
+                        android:id="@+id/tv_name_mom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mom"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_birthday_mom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16/08/1987"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_mom"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="-1dp"
+                    android:src="@drawable/ic_expand" />
+
+                <LinearLayout
+                    android:id="@+id/password_mom_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_birthday_mom_section"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Current password -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change user name"
+                        android:textSize="18dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/black" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:hint="Enter your text"
+                        android:inputType="textPassword"
+                        android:background="@drawable/input_background"
+                        android:drawableRight="@drawable/ic_eye"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="@android:color/black" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New password"
+                        android:textSize="18dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/black" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:hint="Enter new password"
+                        android:inputType="textPassword"
+                        android:background="@drawable/input_background"
+                        android:drawableRight="@drawable/ic_eye"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/avatar_border_orange" />
+
+            <ImageView
+                android:id="@+id/ivAvatarMom"
+                android:layout_width="45dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="29dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_ava_mom" />
+        </FrameLayout>
+
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/bg_sister"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:id="@+id/name_birthday_sister_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-10dp">
+
+                    <TextView
+                        android:id="@+id/tv_name_sister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chloe"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_birthday_sister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30/04/2014"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_sister"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="-1dp"
+                    android:src="@drawable/ic_expand" />
+
+                <LinearLayout
+                    android:id="@+id/password_sister_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_birthday_sister_section"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Current password -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change user name"
+                        android:textSize="18dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/black" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:hint="Enter your text"
+                        android:inputType="textPassword"
+                        android:background="@drawable/input_background"
+                        android:drawableRight="@drawable/ic_eye"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="@android:color/black" />
+
+                    <!-- New password -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New password"
+                        android:textSize="18dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/black" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:hint="Enter new password"
+                        android:inputType="textPassword"
+                        android:background="@drawable/input_background"
+                        android:drawableRight="@drawable/ic_eye"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/avatar_border_red" />
+
+            <ImageView
+                android:id="@+id/ivAvatarSister"
+                android:layout_width="45dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="29dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_ava_sister" />
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/bg_brother"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:id="@+id/name_birthday_brother_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-10dp">
+
+                    <TextView
+                        android:id="@+id/tv_name_brother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tony"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_birthday_brother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07/07/2010"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_brother"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="-1dp"
+                    android:src="@drawable/ic_expand" />
+
+                <LinearLayout
+                    android:id="@+id/password_brother_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_birthday_brother_section"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Current password -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change user name"
+                        android:textSize="18dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/black" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:hint="Enter your text"
+                        android:inputType="textPassword"
+                        android:background="@drawable/input_background"
+                        android:drawableRight="@drawable/ic_eye"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="@android:color/black" />
+
+                    <!-- New password -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New password"
+                        android:textSize="18dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/black" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:hint="Enter new password"
+                        android:inputType="textPassword"
+                        android:background="@drawable/input_background"
+                        android:drawableRight="@drawable/ic_eye"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/avatar_border" />
+
+            <ImageView
+                android:id="@+id/ivAvatarBr"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginLeft="25dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_ava_brother" />
+        </FrameLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_add_family_member"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_add_family_member"
+            android:text="Add a Family member"
+            android:textSize="16sp"
+            android:textColor="@color/teal_500"
+            android:drawablePadding="8dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp" />
+
+        <!-- Button "Save" -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_save"
+            android:text="Save"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>
