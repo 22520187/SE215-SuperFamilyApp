@@ -28,7 +28,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class RepeatActivity extends AppCompatActivity {
-
+    private int flag=0;
     private ImageButton btnBack;
     private MaterialButton btnSave;
     private EditText repeatInterval, afterOccurrences, endDateInput;
@@ -117,11 +117,19 @@ public class RepeatActivity extends AppCompatActivity {
         endDateInput.setInputType(InputType.TYPE_NULL);
         endDateInput.setOnClickListener(view -> showDatePickerDialog());
 
-        btnBack.setOnClickListener(view -> finish());
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent resultIntent = new Intent();
+                setResult(RESULT_CANCELED, resultIntent);
+                finish();
+            }
+        });
         btnSave.setOnClickListener(view -> saveRepeatOptions());
     }
 
     private void saveRepeatOptions() {
+
         String interval = repeatInterval.getText().toString();
         String unit = repeatUnit.getSelectedItem().toString();
         List<String> selectedDays = getSelectedDays();

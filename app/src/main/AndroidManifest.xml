@@ -16,6 +16,18 @@
         android:theme="@style/Theme.SE215SuperFamilyApp"
         tools:targetApi="31">
         <activity
+            android:name=".GeneralReport"
+            android:exported="false" />
+        <activity
+            android:name=".AddMission"
+            android:exported="false" />
+        <activity
+            android:name=".SubmitReport"
+            android:exported="false" />
+        <activity
+            android:name=".MissionReport"
+            android:exported="false" />
+        <activity
             android:name=".RepeatActivity"
             android:exported="false" />
         <activity
@@ -27,25 +39,21 @@
         <activity
             android:name=".CalendarActivity"
             android:exported="true"
-            android:theme="@style/Theme.SE215SuperFamilyApp"/>
+            android:theme="@style/Theme.SE215SuperFamilyApp" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.SE215SuperFamilyApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".MessagerActivity"
             android:exported="true"
             android:theme="@style/Theme.SE215SuperFamilyApp" />
-
         <activity
             android:name=".ChatActivity"
             android:exported="true"
