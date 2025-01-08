@@ -48,12 +48,7 @@ public class MissionFragment extends Fragment {
                   startActivity(intent);
                   return;
               }
-              if(state!=3)
-              {
-                  Intent intent = new Intent(getContext(), SubmitReport.class);
-                  startActivity(intent);
-                  return;
-              }
+
               Toast.makeText(getContext(), "No reported", Toast.LENGTH_SHORT).show();
           }
       });
@@ -65,12 +60,7 @@ public class MissionFragment extends Fragment {
                     startActivity(intent);
                     return;
                 }
-                if(state!=3)
-                {
-                    Intent intent = new Intent(getContext(), SubmitReport.class);
-                    startActivity(intent);
-                    return;
-                }
+
                 Toast.makeText(getContext(), "No reported", Toast.LENGTH_SHORT).show();
             }
         });

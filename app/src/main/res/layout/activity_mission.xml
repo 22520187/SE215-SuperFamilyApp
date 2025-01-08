@@ -50,7 +50,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Personal"
+                    android:text="To do"
                     android:backgroundTint="@color/orange"
                     android:layout_weight="1"
                     android:id="@+id/personal"
@@ -60,7 +60,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="General"
+                    android:text="Completed"
                     android:textColor="@color/black"
                     android:backgroundTint="#E0E0E0"
                     android:layout_weight="1"
@@ -72,7 +72,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Members"
+                    android:text="Mising"
                     android:backgroundTint="#E0E0E0"
                     android:textColor="@color/black"
                     android:layout_weight="1"
