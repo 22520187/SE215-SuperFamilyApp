@@ -6,6 +6,8 @@ android {
     namespace = "com.example.se215_superfamilyapp"
     compileSdk = 34
 
+
+
     defaultConfig {
         applicationId = "com.example.se215_superfamilyapp"
         minSdk = 24
@@ -39,14 +41,14 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.activity)
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.activity:activity:1.9.3")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.google.android.material:material:1.13.0-alpha02")
     implementation ("com.google.android.material:material:1.4.0")
+
 
 }
 

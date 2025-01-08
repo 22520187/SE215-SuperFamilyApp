@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal"
-        android:background="@drawable/bg_header_message"
+        android:background="@drawable/bg_header"
         android:gravity="center_vertical">
 
         <ImageButton

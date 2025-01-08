@@ -1,5 +1,6 @@
 package com.example.se215_superfamilyapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.nav_calendar) {
                  selectorFragment = new CalendarFragment();
             } else if (itemId == R.id.nav_smart_money) {
-                // selectorFragment = new SmartMoneyFragment();
+
             }
 
             if (selectorFragment != null) {

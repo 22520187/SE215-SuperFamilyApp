@@ -86,6 +86,7 @@ public class MissionFragment extends Fragment {
         });
 
         view.findViewById(R.id.personal).setOnClickListener(new View.OnClickListener() {
+            com.google.android.material.floatingactionbutton.FloatingActionButton addBtn=view.findViewById(R.id.fab_add_event) ;
             @Override
             public void onClick(View v) {
                 state=1;
@@ -96,12 +97,14 @@ public class MissionFragment extends Fragment {
                 members.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E0E0E0")));
                 members.setTextColor(Color.parseColor("#000000"));
 
-                personal.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#e79749")));
+                personal.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#5B7FFE")));
                 personal.setTextColor(Color.parseColor("#ffffff"));
+                addBtn.setVisibility(View.VISIBLE);
 
             }
         });
         view.findViewById(R.id.general).setOnClickListener(new View.OnClickListener() {
+            com.google.android.material.floatingactionbutton.FloatingActionButton addBtn=view.findViewById(R.id.fab_add_event) ;
             @Override
             public void onClick(View v) {
                 state=2;
@@ -111,12 +114,16 @@ public class MissionFragment extends Fragment {
                 members.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E0E0E0")));
                 members.setTextColor(Color.parseColor("#000000"));
 
-                general.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#e79749")));
+                general.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#5B7FFE")));
                 general.setTextColor(Color.parseColor("#ffffff"));
+                addBtn.setVisibility(View.GONE);
+
+
 
             }
         });
         view.findViewById(R.id.members).setOnClickListener(new View.OnClickListener() {
+            com.google.android.material.floatingactionbutton.FloatingActionButton addBtn=view.findViewById(R.id.fab_add_event) ;
             @Override
             public void onClick(View v) {
                 state=3;
@@ -126,9 +133,10 @@ public class MissionFragment extends Fragment {
                 personal.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E0E0E0")));
                 personal.setTextColor(Color.parseColor("#000000"));
 
-                members.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#e79749")));
+                members.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#5B7FFE")));
                 members.setTextColor(Color.parseColor("#ffffff"));
 
+                addBtn.setVisibility(View.GONE);
             }
         });
     }

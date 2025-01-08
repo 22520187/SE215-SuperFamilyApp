@@ -18,6 +18,6 @@
         android:title="Calendar" />
     <item
         android:id="@+id/nav_smart_money"
-        android:icon="@drawable/ic_smart_money"
-        android:title="Smart Money" />
+        android:icon="@drawable/ic_person"
+        android:title="Profile" />
 </menu>

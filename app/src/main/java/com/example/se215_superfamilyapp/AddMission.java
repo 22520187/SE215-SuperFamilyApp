@@ -41,7 +41,7 @@ public class AddMission extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
 
     private ImageButton btnBack;
-    private TextView tvStartDay, tvStartTime, tvEndTime, tvRepeat,tv_with_someone;
+    private TextView  tvEndTime, tvRepeat,tv_with_someone,tv_endTime;
     private Button btnSave;
     private EditText etEventName, etDescription;
     private com.example.se215_superfamilyapp.adapter.MemberTagAdapter memberAdapter;
@@ -59,8 +59,7 @@ public class AddMission extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_back);
         btnSave = findViewById(R.id.btn_send);
         etEventName = findViewById(R.id.mission_name);
-        tvStartDay = findViewById(R.id.tv_start_day);
-        tvStartTime = findViewById(R.id.tv_start_time);
+        tv_endTime= findViewById(R.id.tv_end_time_real);
         tvEndTime = findViewById(R.id.tv_end_time);
         tvRepeat = findViewById(R.id.tv_repeat);
         etDescription = findViewById(R.id.et_description);
@@ -100,14 +99,7 @@ public class AddMission extends AppCompatActivity {
         setupListeners();
         setDefaultDate();
 
-        findViewById(R.id.uploadImage).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                isUpdateImage=true;
-                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(intent, PICK_IMAGE_REQUEST);
-            }
-        });
+
 
     }
 
@@ -135,15 +127,12 @@ public class AddMission extends AppCompatActivity {
         });
 
         // Start day click functionality
-        tvStartDay.setOnClickListener(view -> {
-            showDatePicker();
-        });
 
-        tvStartTime.setOnClickListener(view -> {
-            showStartTimeTimePicker();
-        });
 
         tvEndTime.setOnClickListener(view -> {
+            showDatePicker();
+        });
+        tv_endTime.setOnClickListener(view->{
             showEndTimeTimePicker();
         });
 
@@ -202,7 +191,7 @@ public class AddMission extends AppCompatActivity {
 
         // Set the default date in the TextView
         String currentDate = day + "/" + (month + 1) + "/" + year;
-        tvStartDay.setText(currentDate);
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -258,9 +247,10 @@ public class AddMission extends AppCompatActivity {
                 (DatePicker view, int selectedYear, int selectedMonth, int selectedDay) -> {
                     // Format selected date (Month is 0-based, so add 1)
                     String selectedDate = selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear;
+                    TextView endDate=findViewById(R.id.tv_end_time);
 
-                    // Display the selected date in the TextView
-                    tvStartDay.setText(selectedDate);
+                    endDate.setText(selectedDate);
+
 
                     // Optional: Show a Toast with the selected date
                     Toast.makeText(this, "Selected Date: " + selectedDate, Toast.LENGTH_SHORT).show();
@@ -287,7 +277,7 @@ public class AddMission extends AppCompatActivity {
                     String selectedTime = String.format("%02d:%02d", selectedHour, selectedMinute);
 
                     // Display the selected time in the TextView
-                    tvStartTime.setText(selectedTime);
+
 
                     // Optional: Show a Toast with the selected time
                 },
@@ -313,7 +303,7 @@ public class AddMission extends AppCompatActivity {
                     String selectedTime = String.format("%02d:%02d", selectedHour, selectedMinute);
 
                     // Display the selected time in the TextView
-                    tvEndTime.setText(selectedTime);
+                    tv_endTime.setText(selectedTime);
 
                     // Optional: Show a Toast with the selected time
                 },

@@ -173,14 +173,14 @@ public class CalendarFragment extends Fragment {
                 updateButtonStyle(btn_member);
                 resetButtonStyle(btn_general);
                 resetButtonStyle(btn_personal);
-                layout_member.setVisibility(View.VISIBLE);
-                fab_add_event.setVisibility(View.GONE);
+                layout_member.setVisibility(View.GONE);
+                fab_add_event.setVisibility(View.VISIBLE);
             }
         });
 
     }
     private void updateButtonStyle(Button button) {
-        button.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF9800")));
+        button.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#5B7FFE")));
         button.setTextColor(Color.parseColor("#FFFFFF"));
     }
 
