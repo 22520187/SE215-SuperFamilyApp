@@ -173,8 +173,8 @@ public class CalendarFragment extends Fragment {
                 updateButtonStyle(btn_member);
                 resetButtonStyle(btn_general);
                 resetButtonStyle(btn_personal);
-                layout_member.setVisibility(View.GONE);
-                fab_add_event.setVisibility(View.VISIBLE);
+                layout_member.setVisibility(View.VISIBLE);
+                fab_add_event.setVisibility(View.GONE);
             }
         });
 
