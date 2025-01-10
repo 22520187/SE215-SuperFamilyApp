@@ -1,4 +1,4 @@
-package com.example.se215_superfamilyapp.adapter;
+package com.example.se215_superfamilyapp.Adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import androidx.annotation.ColorInt;
 
 import com.example.se215_superfamilyapp.R;
 

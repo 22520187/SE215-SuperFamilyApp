@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
@@ -19,10 +18,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.se215_superfamilyapp.adapter.CalendarAdapter;
-import com.example.se215_superfamilyapp.adapter.EventAdapter;
-import com.example.se215_superfamilyapp.adapter.MemberAdapter;
-import com.example.se215_superfamilyapp.adapter.WeekDayAdapter;
+import com.example.se215_superfamilyapp.Adapter.CalendarAdapter;
+import com.example.se215_superfamilyapp.Adapter.EventAdapter;
+import com.example.se215_superfamilyapp.Adapter.MemberAdapter;
+import com.example.se215_superfamilyapp.Adapter.WeekDayAdapter;
 import com.example.se215_superfamilyapp.model.Event;
 import com.example.se215_superfamilyapp.model.Member;
 
@@ -61,7 +60,7 @@ public class CalendarActivity extends AppCompatActivity {
         rvMemberList = findViewById(R.id.rv_member_list);
         tvSelectedMemberName = findViewById(R.id.tv_selected_member_name);
         layout_member=findViewById(R.id.lo_member);
-        layout_member.setVisibility((View.GONE));
+        layout_member.setVisibility(View.GONE);
         fab_add_event=findViewById(R.id.fab_add_event);
         calendar = Calendar.getInstance();
         loadWeekDate();

@@ -23,14 +23,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.se215_superfamilyapp.CalendarActivity;
 import com.example.se215_superfamilyapp.EventActivity;
 import com.example.se215_superfamilyapp.MemberActivity;
 import com.example.se215_superfamilyapp.R;
-import com.example.se215_superfamilyapp.adapter.CalendarAdapter;
-import com.example.se215_superfamilyapp.adapter.EventAdapter;
-import com.example.se215_superfamilyapp.adapter.MemberAdapter;
-import com.example.se215_superfamilyapp.adapter.WeekDayAdapter;
+import com.example.se215_superfamilyapp.Adapter.CalendarAdapter;
+import com.example.se215_superfamilyapp.Adapter.EventAdapter;
+import com.example.se215_superfamilyapp.Adapter.MemberAdapter;
+import com.example.se215_superfamilyapp.Adapter.WeekDayAdapter;
 import com.example.se215_superfamilyapp.model.Event;
 import com.example.se215_superfamilyapp.model.Member;
 

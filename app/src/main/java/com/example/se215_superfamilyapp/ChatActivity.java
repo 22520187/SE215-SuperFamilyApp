@@ -1,6 +1,5 @@
 package com.example.se215_superfamilyapp;
 import com.example.se215_superfamilyapp.Adapter.ChatAdapter;
-import com.example.se215_superfamilyapp.Fragment.MessageFragment;
 import com.example.se215_superfamilyapp.Adapter.ImageAdapter;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +21,6 @@ import java.util.List;
 import android.view.inputmethod.InputMethodManager;
 import android.content.Intent;
 import android.net.Uri;
-import android.provider.MediaStore;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.PopupWindow;

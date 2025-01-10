@@ -1,4 +1,4 @@
-package com.example.se215_superfamilyapp.adapter;
+package com.example.se215_superfamilyapp.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

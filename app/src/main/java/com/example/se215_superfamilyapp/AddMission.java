@@ -6,7 +6,6 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -20,12 +19,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,7 +38,7 @@ public class AddMission extends AppCompatActivity {
     private TextView  tvEndTime, tvRepeat,tv_with_someone,tv_endTime;
     private Button btnSave;
     private EditText etEventName, etDescription;
-    private com.example.se215_superfamilyapp.adapter.MemberTagAdapter memberAdapter;
+    private com.example.se215_superfamilyapp.Adapter.MemberTagAdapter memberAdapter;
     private static final int PICK_IMAGE_REQUEST = 2;
     private boolean isUpdateImage=false;
     private ImageView imageView;
@@ -71,7 +65,7 @@ public class AddMission extends AppCompatActivity {
         rvMembers=findViewById(R.id.rvMembers);
         selectedMembers = new ArrayList<>();
         selectedMembers.add(new MemberTag("", true)); // Add button
-        memberAdapter = new com.example.se215_superfamilyapp.adapter.MemberTagAdapter(selectedMembers, new com.example.se215_superfamilyapp.adapter.MemberTagAdapter.OnMemberClickListener() {
+        memberAdapter = new com.example.se215_superfamilyapp.Adapter.MemberTagAdapter(selectedMembers, new com.example.se215_superfamilyapp.Adapter.MemberTagAdapter.OnMemberClickListener() {
             @Override
             public void onRemoveClick(int position) {
                 selectedMembers.remove(position);

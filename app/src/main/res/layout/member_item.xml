@@ -14,8 +14,7 @@
         android:layout_gravity="center"
         android:scaleType="centerCrop"
         android:background="@drawable/circle_background"
-        android:clipToOutline="true"
-        android:outlineProvider="background"/>
+       />
     <LinearLayout
         android:visibility="invisible"
         android:id="@+id/count"
